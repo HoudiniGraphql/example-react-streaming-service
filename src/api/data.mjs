@@ -1,18 +1,16 @@
 export const genres = [
   { name: "Comedy", id: 1 },
-  { name: "TalkShow", id: 2 },
+  { name: "Drama", id: 2 },
   { name: "Action", id: 3 },
-  { name: "GameShow", id: 4 },
-  { name: "Sport", id: 5 },
   { name: "RealityTV", id: 6 },
   { name: "Adventure", id: 7 },
-  { name: "Drama", id: 8 },
   { name: "Animation", id: 9 },
   { name: "Crime", id: 10 },
   { name: "Thriller", id: 11 },
   { name: "Romance", id: 12 },
   { name: "Family", id: 12 },
   { name: "Horror", id: 13 },
+  { name: "TalkShow", id: 14 },
 ].reduce(
   (shows, show) => ({
     ...shows,
@@ -36,7 +34,7 @@ export const shows = [
     description:
       "A financial advisor drags his family from Chicago to the Missouri Ozarks, where he must launder money to appease a drug boss.",
     seasons: [1, 2, 3],
-    genres: [genres[10], genres[8], genres[11]],
+    genres: [genres[10], genres[2], genres[11]],
   },
   {
     id: 2,
@@ -52,7 +50,7 @@ export const shows = [
     description:
       "The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico.",
     seasons: [4, 5, 6, 7, 8],
-    genres: [genres[10], genres[8]],
+    genres: [genres[10], genres[2]],
   },
   {
     id: 3,
@@ -83,7 +81,7 @@ export const shows = [
     description:
       "The trials and tribulations of Dr. Martin Ellingham, a socially challenged doctor who moves from London to the picturesque village of Port Wenn in Cornwall.",
     seasons: [18, 19, 20, 21, 22, 23, 24, 25, 26],
-    genres: [genres[1], genres[8], genres[12]],
+    genres: [genres[1], genres[2], genres[12]],
   },
   {
     id: 5,
@@ -98,7 +96,7 @@ export const shows = [
     description:
       "The Baltimore drug scene, as seen through the eyes of drug dealers and law enforcement.",
     seasons: [27, 28, 29, 30, 31],
-    genres: [genres[10], genres[8], genres[11]],
+    genres: [genres[10], genres[2], genres[11]],
   },
   {
     id: 7,
@@ -130,7 +128,7 @@ export const shows = [
     description:
       "When an old enemy, the Cylons, resurface and obliterate the 12 colonies, the crew of the aged Galactica protects a small civilian fleet as they journey toward the fabled 13th colony, Earth.",
     seasons: [35, 36, 37, 38],
-    genres: [genres[3], genres[7], genres[8]],
+    genres: [genres[3], genres[7], genres[2]],
   },
   {
     id: 10,
@@ -145,7 +143,7 @@ export const shows = [
     description:
       "The further adventures in time and space of the alien adventurer known as the Doctor and their companions from planet Earth.",
     seasons: [39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
-    genres: [genres[7], genres[8], genres[12]],
+    genres: [genres[7], genres[2], genres[12]],
   },
   {
     id: 11,
@@ -176,7 +174,7 @@ export const shows = [
     description:
       "Comedian Sacha Baron Cohen appears as Ali G, a rapper-wannabe from Staines, and later as Borat, a Kazakh reporter, and Brüno, an Austrian fashionista, conducting interviews on unsuspecting people.",
     seasons: [52, 53, 54],
-    genres: [genres[1], genres[2]],
+    genres: [genres[1], genres[14]],
   },
   {
     id: 14,
@@ -206,7 +204,7 @@ export const shows = [
     },
     description:
       "In the vicinity of the liberated planet of Bajor, the Federation space station Deep Space Nine guards the opening of a stable wormhole to the far side of the galaxy.",
-    genres: [genres[3], genres[7], genres[8]],
+    genres: [genres[3], genres[7], genres[2]],
   },
   {
     id: 16,
@@ -221,7 +219,7 @@ export const shows = [
     },
     description:
       "The hosts talk about everything car-related. From new cars to how they're fueled, this show has it all.",
-    genres: [genres[1], genres[2]],
+    genres: [genres[1], genres[14]],
   },
   {
     id: 17,
@@ -251,7 +249,7 @@ export const shows = [
     },
     description:
       "Determined to be like the volleyball championship's star player Shouyou, a short boy nicknamed 'the small giant,' joins his school's volleyball club.",
-    genres: [genres[9], genres[1], genres[8]],
+    genres: [genres[9], genres[1], genres[2]],
   },
   {
     id: 19,
@@ -266,7 +264,7 @@ export const shows = [
     },
     description:
       "A high school chemistry teacher turned methamphetamine producer partners with a former student to secure his family's future.",
-    genres: [genres[10], genres[8], genres[11]],
+    genres: [genres[10], genres[2], genres[11]],
   },
   {
     id: 20,
@@ -296,7 +294,7 @@ export const shows = [
     },
     description:
       "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.",
-    genres: [genres[8]],
+    genres: [genres[2]],
   },
 ].reduce(
   (shows, show) => ({

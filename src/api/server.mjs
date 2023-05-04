@@ -54,7 +54,9 @@ const schema = createSchema({
           await sleep(args.delay);
         }
 
-        return connectionFromArray(Object.values(genres), args);
+        const list = Object.values(genres);
+
+        return connectionFromArray(list, args);
       },
     },
     Genre: {

@@ -45,7 +45,7 @@ export default function ({ Session, children }) {
             </button>
           </div>
         </div>
-        <dic className="billboard-shade z-0" />
+        <div className="billboard-shade z-0" />
         <div className="billboard-bottom-vignette" />
       </aside>
     </main>
