@@ -2,13 +2,9 @@ import { isPending } from "$houdini";
 import React from "react";
 
 export default function ({ ShowList }) {
-  const { genres } = ShowList;
-
-  const [state, setState] = React.useState(0);
-
   return (
     <div className="flex flex-col gap-10">
-      {genres.edges.map(({ node: genre }, i) => (
+      {ShowList.genres.edges.map(({ node: genre }, i) => (
         <div key={i} className="rounded-lg text-white pl-12">
           <h2 className="text-lg mb-4">
             {isPending(genre.name) ? (
