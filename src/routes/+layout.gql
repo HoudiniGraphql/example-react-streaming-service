@@ -1,0 +1,15 @@
+query Session {
+  viewer {
+    id
+    profile {
+      source
+    }
+  }
+  suggestion {
+    name
+    description
+    billboard {
+      source
+    }
+  }
+}

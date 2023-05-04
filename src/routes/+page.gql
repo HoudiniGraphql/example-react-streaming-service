@@ -1,0 +1,19 @@
+query ShowList @loading {
+  genres(delay: 2000) @loading {
+    edges @loading(count: 10) {
+      node {
+        name
+        shows {
+          edges @loading(count: 5) {
+            node {
+              name
+              billboard {
+                source
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
