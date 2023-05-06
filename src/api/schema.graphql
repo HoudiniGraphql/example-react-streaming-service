@@ -10,6 +10,8 @@ type Query {
   ): ShowConnection!
   viewer: User
 
+  show(id: ID!): Show
+
   genres(
     first: Int
     after: Cursor
@@ -28,6 +30,7 @@ type User {
 }
 
 type Show {
+  id: ID!
   name: String!
   poster: Image!
   billboard: Image!
@@ -37,16 +40,19 @@ type Show {
 }
 
 type Season {
+  id: ID!
   name: String
   episodes: EpisodeConnection!
 }
 
 type Genre {
+  id: ID!
   name: String!
   shows: ShowConnection!
 }
 
 type Episode {
+  id: ID!
   director: [Person!]!
   number: Int!
   name: String!
@@ -54,6 +60,7 @@ type Episode {
 }
 
 type Person {
+  id: ID!
   name: String!
   photo: Image!
 }

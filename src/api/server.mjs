@@ -22,7 +22,13 @@ const typeDefs = sourceFiles.map((filepath) => {
 const schema = createSchema({
   typeDefs,
   resolvers: {
+    Show: {
+      id: (show) => `Show:${show.id}`,
+    },
     Query: {
+      show(_, { id }) {
+        return shows[parseInt(id)];
+      },
       async shows(_, args) {
         if (args.delay) {
           await sleep(args.delay);
