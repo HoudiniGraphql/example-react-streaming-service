@@ -1,0 +1,8 @@
+query Session {
+  viewer {
+    id
+    profile {
+      source
+    }
+  }
+}

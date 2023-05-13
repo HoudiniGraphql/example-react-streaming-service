@@ -23,11 +23,13 @@ const schema = createSchema({
   typeDefs,
   resolvers: {
     Show: {
-      id: (show) => `Show:${show.id}`,
+      id: (show) => Buffer.from(`Show:${show.id}`).toString("base64"),
     },
     Query: {
       show(_, { id }) {
-        return shows[parseInt(id)];
+        return shows[
+          parseInt(Buffer.from(id, "base64").toString().split(":")[1])
+        ];
       },
       async shows(_, args) {
         if (args.delay) {

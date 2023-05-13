@@ -1,10 +1,4 @@
-query Session {
-  viewer {
-    id
-    profile {
-      source
-    }
-  }
+query HomeScreen {
   suggestion {
     name
     description

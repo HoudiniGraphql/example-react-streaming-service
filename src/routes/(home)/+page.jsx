@@ -1,4 +1,4 @@
-import { isPending } from "$houdini";
+import { isPending, Link } from "$houdini";
 import React from "react";
 
 export default function ({ ShowList }) {
@@ -18,7 +18,8 @@ export default function ({ ShowList }) {
               const pending = isPending(show.name);
 
               return (
-                <div
+                <Link
+                  href={pending ? "#" : `/shows/${show.id}`}
                   className={pending ? "pulsate" : ""}
                   style={{ width: 233, height: 130 }}
                   key={pending ? i : show.name}
@@ -28,7 +29,7 @@ export default function ({ ShowList }) {
                   ) : (
                     <img src={show.billboard.source} />
                   )}
-                </div>
+                </Link>
               );
             })}
           </div>

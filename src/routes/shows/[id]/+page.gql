@@ -1,5 +1,8 @@
 query ShowInfo($id: ID!) {
   show(id: $id) {
     name
+    billboard {
+      source
+    }
   }
 }

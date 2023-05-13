@@ -1,4 +1,4 @@
-export default function ({ Session, children }) {
+export default function ({ Session, HomeScreen, children }) {
   return (
     <main className="flex-col relative">
       <nav
@@ -15,7 +15,6 @@ export default function ({ Session, children }) {
           className="rounded shadow-lg"
         />
       </nav>
-
       <div className="absolute z-10" style={{ top: "calc(56.25vw - 100px)" }}>
         <article className="flex flex-col w-100" style={{}}>
           {children}
@@ -25,13 +24,13 @@ export default function ({ Session, children }) {
       <aside
         className="billboard text-white absolute top-0 z-0"
         style={{
-          backgroundImage: `url(${Session.suggestion.billboard.source})`,
+          backgroundImage: `url(${HomeScreen.suggestion.billboard.source})`,
         }}
       >
         <div className="absolute bottom-28 z-20 text-white pl-12 pb-10">
-          <h1 className="text-2xl mb-4 text">{Session.suggestion.name}</h1>
+          <h1 className="text-2xl mb-4 text">{HomeScreen.suggestion.name}</h1>
           <h2 className="text-l max-w-lg text mb-4">
-            {Session.suggestion.description}
+            {HomeScreen.suggestion.description}
           </h2>
           <div className="flex flex-row gap-4">
             <button className="rounded-lg billboard-button w-20 bg-white text-lg text-black">
