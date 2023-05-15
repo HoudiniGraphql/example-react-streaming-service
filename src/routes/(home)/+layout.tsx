@@ -1,4 +1,6 @@
-export default function ({ Session, HomeScreen, children }) {
+import { LayoutProps } from "./$types";
+
+export default function ({ Session, HomeScreen, children }: LayoutProps) {
   return (
     <main className="flex-col relative">
       <nav
@@ -9,7 +11,7 @@ export default function ({ Session, HomeScreen, children }) {
         }}
       >
         <img
-          src={Session.viewer.profile.source}
+          src={Session.viewer?.profile?.source}
           height={50}
           width={50}
           className="rounded shadow-lg"

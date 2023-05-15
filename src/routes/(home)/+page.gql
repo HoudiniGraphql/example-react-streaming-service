@@ -6,6 +6,7 @@ query ShowList @loading {
         shows {
           edges @loading(count: 5) {
             node {
+              id
               name
               billboard {
                 source
