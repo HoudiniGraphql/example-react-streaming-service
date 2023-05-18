@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function App({ children }) {
+export default function App({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <head>
@@ -16,17 +16,20 @@ export default function App({ children }) {
   );
 }
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: unknown) {
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error: unknown, info: any) {
     console.error("ErrorBoundary caught an error:", error, info);
   }
 

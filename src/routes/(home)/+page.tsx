@@ -1,4 +1,4 @@
-import { PendingValue, Link } from "$houdini";
+import { Link, isPending } from "$houdini";
 import { PageProps } from "./$types";
 
 export default function ({ ShowList }: PageProps) {
@@ -7,7 +7,7 @@ export default function ({ ShowList }: PageProps) {
       {ShowList.genres.edges.map(({ node: genre }, i) => (
         <div key={i} className="rounded-lg text-white pl-12">
           <h2 className="text-lg mb-4">
-            {genre.name === PendingValue ? (
+            {isPending(genre.name) ? (
               <div className="pulsate h-5 w-14" />
             ) : (
               genre.name
@@ -15,7 +15,7 @@ export default function ({ ShowList }: PageProps) {
           </h2>
           <div className="flex flex-row gap-1">
             {genre.shows.edges.map(({ node: show }, i) => {
-              if (show.name === PendingValue) {
+              if (isPending(show)) {
                 return (
                   <Link
                     href="#"
@@ -31,7 +31,6 @@ export default function ({ ShowList }: PageProps) {
               return (
                 <Link
                   href={`/shows/${show.id}`}
-                  className={""}
                   style={{ width: 233, height: 130 }}
                   key={show.name}
                 >
